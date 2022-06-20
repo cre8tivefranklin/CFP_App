@@ -1,0 +1,31 @@
+<!DOCTYPE>
+<html>
+
+  <head>
+    <script src="RGraph/libraries/RGraph.svg.common.core.js"></script>
+    <script src="RGraph/libraries/RGraph.svg.common.tooltips.js"></script>
+    <script src="RGraph/libraries/RGraph.svg.rose.js"></script>
+  </head>
+
+  <body>
+    <h1>Franklin's Awesomeness</h1>
+    <div style="width: 450px; height: 400px" id="chart-container"></div>
+  </body>
+
+  <script>
+    new RGraph.SVG.Rose({
+        id: 'chart-container',
+        data: [8,6,4,3,8,6,3],
+        options: {
+            colors: [ 'rgba(255,0,0,0.5)', 'rgba(0,255,0,0.5)', 'rgba(0,0,255,0.5)' ],
+            backgroundGridRadialsCount: 0,
+            linewidth: 2,
+            amargin: '5deg',
+            labels: ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'],
+            tooltips: ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'],
+            linewidth: .5
+        }
+    }).draw();
+</script>
+
+</html>

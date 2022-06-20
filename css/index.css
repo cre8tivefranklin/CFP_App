@@ -1,0 +1,233 @@
+
+    
+/* Styling the Body element i.e. Color,
+Font, Alignment */
+body {
+    background-color: #fff;
+    font-family: Verdana;
+    text-align: center;
+}
+
+/* Styling the Form (Color, Padding, Shadow) */
+
+.text, .desktop-form{
+    padding: 50px;
+}
+
+.text{
+    text-align: center;
+    margin: 50px;
+}
+.form-design {
+    background-color: #00ff37fe;
+    padding: 5px;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+    z-index: 0;
+    margin: 20px;
+    border-left: 25px solid rgb(55, 0, 255);
+    border-right: 25px solid rgb(255, 0, 0);
+    border-radius: 25px;  
+}
+.form-design h2{
+    text-align: center;
+}
+.form-design h3, h4{
+    padding: 5px;
+    border-radius: 25px;
+    cursor: pointer;
+    text-align: center;
+}
+.chart{
+    height: 600px;
+    width: 100%;
+    display: none;
+}
+
+.mobile-form{
+    display: none;
+}
+
+.tree{
+    margin: 75px;
+}
+.C, .C_1, .C_2, .C_3, .C_4, .C_5{
+    display: none;
+}
+
+.par, .par_sub{
+    background-color: rgba(38, 0, 255, 0.215);
+    padding: 10px;
+    margin: 2.4px;
+    border-radius: 25px;
+    font-size: 15px;
+}
+
+.par_sub{
+    margin: 20px;
+}
+
+/* Styling form-control Class */
+.form-control {
+    text-align: left;
+    margin-bottom: 25px;
+}
+#demo{
+    padding: 10px;
+    height: 20px;
+    border: 2px solid black;
+}
+
+/* Styling form-control Label */
+.form-control label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Styling form-control input,
+select, textarea */
+.form-control input,
+.form-control select,
+.form-control textarea {
+    border: 1px solid #777;
+    border-radius: 2px;
+    font-family: inherit;
+    padding: 10px;
+    display: block;
+    width: 95%;
+}
+
+/* Styling form-control Radio
+button and Checkbox */
+.form-control input[type="radio"],
+.form-control input[type="checkbox"] {
+    display: inline-block;
+    width: auto;
+}
+
+/* Styling Button */
+.button {
+    background-color: #05c46b;
+    border: 1px solid #777;
+    border-radius: 2px;
+    font-family: inherit;
+    font-size: 21px;
+    display: block;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+.subscript{
+    font-size: 20px;
+}
+
+.F, .E, .T {
+    text-align: left;
+    padding: 10px;
+}
+.F:hover, .E:hover, .T:hover{
+    cursor: pointer;
+    background-color: rgba(255,255,255,.25);
+}
+
+.site-header {
+   position: fixed;
+   width: 100%;
+   top: 0px;
+   background: #08121A;
+   z-index: 1;
+   color: white;
+   width: 100%;
+}
+.logo{
+   position: fixed;
+   left: 0px;
+   top: 0px;
+}
+.logo-m{
+   display: none;
+}
+a{
+   text-decoration: none;
+   color: white;
+}
+a:hover{
+   color: white;
+}
+
+.chart-margin{
+    margin: 100px;
+}
+
+.FET_0, .veggieFruit{
+    border-bottom: 1px solid black;
+}
+#heading-m{
+    display: none;
+   }
+#CFP-form{
+    display: none;
+    text-align: center;
+}
+.foot{
+    background-color: black;
+    color: white;
+    padding: 25px;
+}
+
+@media only screen and (max-width: 600px) {
+    /**form.desktop-form {
+        display: none;
+      }**/
+    .b{
+        width: 100%;
+    }
+    .chart{
+        height: 280px;
+    }
+    .chart-margin{
+        margin: 0px;
+    }
+
+    .form-design{
+        margin: 10px;
+    }
+   .logo{
+       display: none;
+   }
+   .logo-m{
+       position: fixed;
+       left: 0px;
+       bottom: 0px;
+       display: block;
+       background-color: #ba0000;
+       padding: 10px;
+       opacity: .5;
+       z-index: 1;
+       }
+   .logo-m:hover{
+       opacity: 1;
+   }
+   .site-header{
+       position: fixed;
+       top: 2px;
+       left: 2px;
+       width: 70px;
+       height: 70px;
+       cursor: pointer;
+       border-radius: 20px;
+       background-color: rgba(0, 0, 0, 0.516);
+   }
+   .site-header:hover{
+    background-color: black;
+   }
+   #heading-d{
+       display: none;
+   }
+   #heading-m{
+    display: block;
+    font-size: 22px;
+    text-align: center;
+    margin: 10px;
+    border-bottom: 1px solid white;
+   }
+}
