@@ -24,12 +24,18 @@ body {
     box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
     z-index: 0;
     margin: 20px;
-    border-left: 25px solid rgb(55, 0, 255);
-    border-right: 25px solid rgb(255, 0, 0);
     border-radius: 25px;  
+    border: solid black 2px;
 }
 .form-design h2{
     text-align: center;
+}
+.slider{
+    border-left: 25px solid rgb(55, 0, 255);
+    border-right: 25px solid rgb(255, 0, 0);
+}
+.form-design h3{
+    border: solid black 1px;
 }
 .form-design h3, h4{
     padding: 5px;
@@ -46,15 +52,28 @@ body {
 .mobile-form{
     display: none;
 }
+.heading-d{
+    z-index: 2;
+}
 
 .tree{
     margin: 75px;
 }
-.C, .C_1, .C_2, .C_3, .C_4, .C_5{
+.F_C, .F_C_1, .F_C_2, .F_C_3, .F_C_4, .F_C_5{
     display: none;
 }
+.E_C, .E_C_1, .E_C_2, .E_C_3, .E_C_4, .E_C_5{
+    display: none;
+}
+.T_C, .T_C_1, .T_C_2, .T_C_3, .T_C_4, .T_C_5{
+    display: none;
+}
+.gas{
+    border-top: solid 1px black;
+    margin-top: 10px;
+}
 
-.par, .par_sub{
+.par{
     background-color: rgba(38, 0, 255, 0.215);
     padding: 10px;
     margin: 2.4px;
@@ -62,8 +81,13 @@ body {
     font-size: 15px;
 }
 
+
 .par_sub{
     margin: 20px;
+}
+.par_sub_sub{
+    border-left: solid 1px black;
+    padding: 5px;
 }
 
 /* Styling form-control Class */
@@ -157,6 +181,24 @@ a:hover{
 .chart-margin{
     margin: 100px;
 }
+.index-result{
+    display: none;
+    margin: 100px;
+    position: fixed;
+    top: 150px;
+    z-index: 1;
+}
+#toggole-results svg{
+    height: 50px;
+}
+#toggle-results{
+    position: absolute;
+    top: 150px;
+    right: 10px;
+    margin: 15px;
+    padding: 20px;
+    display: none;
+}
 
 .FET_0, .veggieFruit{
     border-bottom: 1px solid black;
@@ -183,6 +225,7 @@ a:hover{
     }
     .chart{
         height: 280px;
+        z-index: 0;
     }
     .chart-margin{
         margin: 0px;

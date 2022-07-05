@@ -42,6 +42,8 @@
   cursor: pointer;
 }
 </style>
+  
+
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <link href='https://fonts.googleapis.com/css?family=Roboto Mono' rel='stylesheet'>
 <style>
@@ -49,6 +51,7 @@ body {
     font-family: 'Roboto Mono';
 }
 </style>
+
 </head>
 
 <body>
@@ -63,7 +66,7 @@ body {
 
 <div class ="text" id="text">
   <h1 class="title">CFP</h1>
-  <p>Slide to the left(blue) to indicate low consumption, right(red) to indicate high consumption. </p>
+  <p>Drag the slider to the left(blue) to indicate low consumption, right(red) to indicate high consumption. For example, if your consumption of beef is low, you would drag it toward the blue edge of the panel. Once you've done that with each point, click the blue bar below to submit your info and get the resulting data.</p>
 </div>
 
 <form class="row desktop-form" id="form">
@@ -71,59 +74,81 @@ body {
 <div class="form-design slidecontainer col">
 
   <h2 class="FET_0">Food</h2>
-  <p>How much food is produced in NJ or the US? Food accounts for over a quarter (26%) of global greenhouse gas emissions<sub>(Ritchie)</sub>.</p>
-<br>
   <div class="par">
-  <h3 onclick="infoCard_0()">Vegetables/Fruits</h3>
-    <div class="C" id="card">
+  <h3 onclick="F_infoCard_0()">Vegetables/Fruits</h3>
+    <div class="F_C" id="F_card">
       <ul>
-        <li>Brassicaceae <sub>[pronounced: brass-ih-KAY-see-ee ]</sub>(broccoli, cauliflower)</li>
-        <li>Legumes(beans, lentils, peas)</li>
-        <li>Root Vegetable(carrots, potatoes, yams)</li>
+        <li>Blueberries or cranberries</li>
+        <li>Bell peppers</li>
+        <li>Peaches</li>
+        <li>Eggplant</li>
+        <li>Tomatoes</li>
       </ul>
-      <p>Nationally, New Jersey is one of the top 10 producers of blueberries, cranberries, peaches, tomatoes, bell peppers, eggplant"(<a target="_blank" href ="https://www.nj.gov/agriculture/about/overview.html"><sub>NJDA</sub></a>).</p>
     </div> 
-  <input type="range" min="0" max="10" value="0" class="slider" id="f0">
+    <p>Are you eating a lot of fruits and veggies?</p>
+  <input type="range" min="0" max="10" value="5" class="slider" id="f0">
   </div>
 
   <div class="par">
-    <h3 onclick="infoCard_1()" class="veggieFruit">Proteins/Meats</h3>
-    <div class ="C_1" id="card_1">
-      <p>Consider the following.</p>
+    <h3 onclick="F_infoCard_1()">Proteins/Meats</h3>
+    <div class ="F_C_1" id="F_card_1">
+      <p>Consider the following:</p>
       <ul>
-        <li>Is it grassfed?</li>
-        <li>Where are you purchasing it from? Is it produced locally or in the USA?</li>
+        <li>Beef</li>
+        <li>Chicken</li>
+        <li>Pork</li>
+        <li>Seafood</li>
       </ul> 
+      <div class="par_sub">
+        <h4 style="text-align: left">Are they grassfed?</h4>
+        <div class="par_sub_sub">
+          <label for="no">No</label>
+          <input type="radio" value="0" id="no" name="foo"><br>
+          <label for"maybe">Maybe/Not sure</label>
+          <input type="radio" value=".5" id="maybe" name="foo"><br>
+          <label for"yes">Yes</label>
+          <input type="radio" value="1" id="yes" name="foo"><br>
+        </div>
+      </div>
     </div>
+    <p>Is your consumption high?</p>
+
+    <input type="range" min="0" max="10" value="5" class="slider" id="f1">
   </div>
 
 
-  <div class="par_sub">
-    <h4>Beef</h4> 
-    <input type="range" min="0" max="10" value="0" class="slider" id="f1">
-  </div>
 
-  <div class="par_sub">
-    <h4>Pork</h4>  
-    <input type="range" min="0" max="10" value="0" class="slider" id="f2">
-  </div>
-
-  <div class="par_sub">
-    <h4>Seafood</h4>  
-    <input type="range" min="0" max="10" value="0" class="slider" id="f3">
-  </div>
-
-  <div class="par_sub">
-    <h4>Chicken</h4>  
-    <input type="range" min="0" max="10" value="0" class="slider" id="f4">
+  <div class="par">
+    <h3 onclick="F_infoCard_2()">Other Proteins</h3>  
+    <div class="F_C_2" id="F_card_2">
+      <p>How often are you eating legumes or vegan alternatives such as:</p>
+      <ul>
+        <li>Peanuts</li>
+        <li>Chickpeas</li>
+        <li>Beans(any kind)</li>
+    </div>
+    <input type="range" min="0" max="10" value="5" class="slider" id="f2">
   </div>
 
   <div class="par">
-    <h3 onclick="infoCard_5()">Imported</h3> 
-    <div class ="C_5" id="card_5">
-      <p>Consider this with all foods, not just beef. Labels on foods packaged will state where they're coming. Here is a <a href="https://www.panynj.gov/port/en/our-port/facts-and-figures.html" target="_blank">live feed of the Ambrose Anchorage</a>. Imported goods get shipped through the Ambrose Channel between NJ and NY.</p>
+    <h3 onclick="F_infoCard_3()">Organic</h3>
+    <p>Are the foods you're eating farm fresh?</p>
+    <input type="range" min="0" max="10" value="5" class="slider" id="f3">
+  </div>
+
+  <div class="par">
+    <h3 onclick="F_infoCard_4()">Imported</h3> 
+    <p>Is your food locally grown?</p>
+    <div class ="F_C_4" id="F_card_4">
+      <p>Consider this with all foods. For example, are they imported from the following:</p>
+      <ul>
+        <li>Brazil</li>
+        <li>India</li>
+      </ul>
+      <p>Or, is your diet composed of locally grown foods?</p>
+      <p> Here is a <a href="https://www.panynj.gov/port/en/our-port/facts-and-figures.html" target="_blank">live feed of the Port of NY/NJ</a>.</p>
     </div>  
-    <input type="range" min="0" max="10" value="0" class="slider" id="f5">
+    <input type="range" min="0" max="10" value="5" class="slider" id="f4">
   </div>
 
 </div>
@@ -131,39 +156,144 @@ body {
 
 <div class="form-design slidecontainer col">
   <h2 class="FET_0">Transportation</h2>
-  <p>As far as your personal vehicle is concerned, consider how often you use it. Is it for work or leisure? Does it use natural gas, diesel, or electric? Do you drive for a delivery service(Uber, Lyft, Doordash, etc?).</p>
-
+  
+<!--
+  SET PARAM FOR MOTOR VEHICLES
+  GAS 
+  MILEAGE
+-->
   <div class="par">
-    <h3>Car</h3>
-    <input type="range" min="0" max="10" value="0" class="slider" id="t0">
+    <h3 onclick="T_infoCard_0()">Motor Vehicle</h3>
+    <div class="T_C" id="T_card">
+      <p>For example:</p>
+      <ul>
+        <li>Cars</li>
+        <li>Buses</li>
+        <li>Trucks</li>
+      </ul>
+      <p>Are you driving for a company? Such as for the NJT, freight delivery, or a rideshare? How many hours a day?</p>
+      <div class="par_sub_sub">
+        <label><span id="hr_display"></span><sub>hrs</sub> <p>Per day</p></label><br>
+        <input placeholder="1" type="range" id="hr" min="1" max="24" value="1"><br>
+        <label><span id="mi_display"></span><sub>mi</sub> <p>Per day</p></label><br>
+        <input placeholder="1" type="number" id="mi" min="1" max="1000000"><br>
+        <div class="gas">
+          <label for="no">Diesel</label>
+          <input type="radio" value="0" id="no" name="foo"><br>
+          <label for"yes">Natural</label>
+          <input type="radio" value="1" id="yes" name="foo"><br>
+        </div>
+      </div>
+    </div>
+    <input type="range" min="0" max="10" value="5" class="slider" id="t0">
   </div>
 
   <div class="par">
-    <h3>Truck</h3>
-    <input type="range" min="0" max="10" value="0" class="slider" id="t1">
+    <h3 onclick="T_infoCard_1()">Train</h3>
+    <div class="T_C_1" id="T_card_1">
+      <ul>
+        <li>MTA</li>
+        <li>NJT</li>
+      </ul>
+     </div>
+    <p>Is your train use frequent?</p>
+    <input type="range" min="0" max="10" value="5" class="slider" id="t1">
   </div>
 
   <div class="par">
-    <h3>Bus</h3>
-    <input type="range" min="0" max="10" value="0" class="slider" id="t2">
+    <h3 onclick="T_infoCard_2()">Air</h3>
+    <div class="T_C_2" id="T_card_2">
+      <ul>
+        <li>Internationally</li>
+        <li>Nationally</li>
+      </ul>
+    </div>
+    <p>Are you frequently flying over long distances?</p>
+    <input type="range" min="0" max="10" value="5" class="slider" id="t2">
   </div>
 
   <div class="par">
-    <h3>Train</h3>
-    <input type="range" min="0" max="10" value="0" class="slider" id="t3">
+    <h3 onclick="T_infoCard_3()">Intrastate</h3>
+    <div class="T_C_3" id="T_card_2"></div>
+    <p>Between states</p>
+    <input type="range" min="0" max="10" value="5" class="slider" id="t3">
   </div>
 
   <div class="par">
-    <h3>Interstate</h3>
-    <input type="range" min="0" max="10" value="0" class="slider" id="t4">
+    <h3 onclick="T_infoCard_4()">Interstate</h3>
+    <div class="T_C_4" id="T_card_4"></div>
+    <p>Only in NJ</p>
+    <input type="range" min="0" max="10" value="5" class="slider" id="t4">
   </div>
 
 </div>
 
 
 <div class="form-design slidecontainer col">
+
   <h2 class="FET_0">Energy</h2>
-  <input type="range" min="0" max="10" value="0" class="slider" id="myRange">
+  <div class="par">
+    <h3 onclick="E_infoCard_0()">Household</h3>
+      <div>
+        <h4 style="text-align: left">How many Adults?</h4>
+        <div class="par_sub_sub">
+          <h5 id="e0_display"></h5><br>
+          <input class="slider" type="range" id="e0" min="1" max="5" value="2"><br>
+        </div>
+      </div> 
+      <p></p>
+  </div>
+
+    <div class="par">
+      <h3 onclick="E_infoCard_1()">Electronics</h3>
+      <div class="E_C_1" id="E_card_1">
+        <h4 style="text-align: left">Smart devices, and others.</h4>
+        <div class="par_sub_sub">
+          <label for="sp">Smart phones/tablets</label>
+          <input placeholder="1" type="number" id="sp" min="1" max="5"><br>
+          <label for="com">Laptop/Desktop computers</label>
+          <input placeholder="1" type="number" id="com" min="1" max="5"><br>
+          <label for="gc">Gaming Consoles</label>
+          <input placeholder="1" type="number" id="gc" min="1" max="5"><br>
+          <label for="tv">Smart TVs</label>
+          <input placeholder="1" type="number" id="tv" min="1" max="5"><br>
+        </div>
+      </div> 
+        <p></p>
+        <input type="range" min="0" max="10" value="5" class="slider" id="e1">
+      </div>
+
+      <div class="par">
+        <h3 onclick="E_infoCard_2()">Gas</h3>
+        <div class="par_sub_sub E_C_2" id="E_card_2">
+          <label for="no">Diesel</label>
+          <input type="radio" value="0" id="no" name="foo"><br>
+          <label for"yes">Natural</label>
+          <input type="radio" value="1" id="yes" name="foo"><br>
+        </div>
+          <p></p>
+          <input type="range" min="0" max="10" value="5" class="slider" id="e2">
+        </div>
+
+        <div class="par">
+          <h3 onclick="E_infoCard_3()">Appliances</h3>
+          <div class="E_C_3" id="E_card_3">
+            <ul>
+              <label>Refridgeration</label>
+              <input type="range" value="1" min="0" max="3"><br>
+              <label>Microwave</label>
+              <input type="range" value="1" min="0" max="3"><br>
+              <label>Range(stove and oven)</label>
+              <input type="range" value="1" min="0" max="3"><br>
+              <label>Range Hood</label>
+              <input type="range" value="1" min="0" max="3"><br>
+              <label>Washer/Dryer</label>
+              <input type="range" value="1" min="0" max="3"><br>
+            </ul>
+          </div>
+            <input type="range" min="0" max="10" value="5" class="slider" id="e3">
+          </div>
+
 </div>
 
 <!--p>Value: <span id="demo"></span></p-->
@@ -177,8 +307,30 @@ body {
 
 
 <div class='chart-margin'>
-  <div class="col chart" id="chart-container"></div>
-  <p id ="CFP-form">CFP * 10<sup>-2</sup> or 10<sup>-1</sup> if CFP > 100 or 1000</p>
+  
+
+    <button onclick="index()" type="button" class="" id="toggle-results">
+      Index
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-activity" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M6 2a.5.5 0 0 1 .47.33L10 12.036l1.53-4.208A.5.5 0 0 1 12 7.5h3.5a.5.5 0 0 1 0 1h-3.15l-1.88 5.17a.5.5 0 0 1-.94 0L6 3.964 4.47 8.171A.5.5 0 0 1 4 8.5H.5a.5.5 0 0 1 0-1h3.15l1.88-5.17A.5.5 0 0 1 6 2Z"/>
+      </svg>
+    </button>
+
+    <div class="index-result col" id="index">
+      <div  class="card">
+        <h1>Results Index</h1>
+        <p></p>
+        <ul>
+          <li></li>
+        </ul>
+      </div>    
+    </div>
+
+        <div class="chart" id="chart-container">
+    </div>
+    <p id ="CFP-form"></p>
+
+
 </div>
 
 
@@ -197,9 +349,10 @@ body {
 </footer>
 
 <script src="js/radar.js"></script>
-<script>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
 
 
-</script>
 </body>
 </html>
